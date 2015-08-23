@@ -15,19 +15,22 @@
 
 .one-sidebar-first
   .sidebar
-    +span(3 of 12 first)
+    +breakpoint($tablet)
+      +span(3 of 12 first)
   .content
     box-sizing: border-box
-    padding-left: 2em
-    +span(9 of 12 last)
+    +breakpoint($tablet)
+      padding-left: 2em
+      +span(9 of 12 last)
 .one-sidebar-last
   .sidebar
-    +span(2 of 12 last)
-    position: fixed
+    +breakpoint($tablet)
+      +span(2 of 12 last)
   .content
     box-sizing: border-box
-    padding-left: 2em
-    +span(9 of 12 first)
+    +breakpoint($tablet)
+      padding-right: 2em
+      +span(9 of 12 first)
 
 // Image right & left
 .image-left,

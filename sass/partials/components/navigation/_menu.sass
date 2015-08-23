@@ -1,0 +1,64 @@
+#menu
+  position: fixed
+  left: -50%
+  top: 0
+  bottom: 0
+  min-width: 200px
+  padding: 2em
+  background-color: rgba(255,255,255,.9)
+  +transition(left cubic-bezier(.21,.75,.6,.94) .4s)
+  &.is-active
+    left: 0%
+    +transition(left cubic-bezier(.21,.75,.6,.94) .4s)
+  +breakpoint($tablet)
+    padding: 13px 0 0 0
+    min-width: auto
+    top: initial
+    left: initial
+    right: initial
+    bottom: initial
+    background-color: transparent
+  > li
+    margin-bottom: 15px
+    > a
+      color: gray
+      font-size: 20px
+      margin-bottom: 5px
+      display: block
+      border: 0
+      outline: none
+      font-family: $font-title
+      &:after
+        content: ""
+        display: block
+        height: 1px
+        margin-top: 5px
+        background-color: turquoise
+        margin-bottom: 10px
+        width: 0
+      &:hover,
+      &.active
+        color: turquoise
+      &:hover
+        &:after
+          width: 10%
+          +transition(all cubic-bezier(.21,.75,.6,.94) .4s)
+      &.active
+        &:after
+          width: 100%
+          +transition(all cubic-bezier(.21,.75,.6,.94) .3s)
+  #sub-menu
+    li
+      margin-bottom: 3px
+      a
+        color: gray
+        background: url('../images/arrow.png') 0 center no-repeat
+        padding-left: 20px
+
+
+.mobile-navigation
+  position: absolute
+  top: 1em
+  right: 1em
+  +breakpoint($tablet)
+    display: none
