@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Back to top button style
+ */
+.backtotop
+  width: 60px
+  height: 60px
+  +border-radius(50%)
+  position: fixed
+  right: -70px
+  bottom: 16px
+  background-color: $white
+  border: 1px solid $turquoise
+  color: $turquoise
+  text-transform: uppercase
+  +transition(all cubic-bezier(.21,.75,.6,.94) .5s)
+  &:hover
+    color: $white
+    background-color: $turquoise
+  &.is-active
+    right: 16px
+    +transition(all cubic-bezier(.21,.75,.6,.94) .5s)

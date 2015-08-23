@@ -1,15 +1,17 @@
 #menu
   position: fixed
-  left: -50%
+  left: -100%
   top: 0
   bottom: 0
   min-width: 200px
+  z-index: 9999
   padding: 2em
   background-color: rgba(255,255,255,.9)
-  +transition(left cubic-bezier(.21,.75,.6,.94) .4s)
+  +transition(left cubic-bezier(.21,.75,.6,.94) 1.5s)
+  list-style: none
   &.is-active
     left: 0%
-    +transition(left cubic-bezier(.21,.75,.6,.94) .4s)
+    +transition(left cubic-bezier(.21,.75,.6,.94) .5s)
   +breakpoint($tablet)
     padding: 13px 0 0 0
     min-width: auto
@@ -55,10 +57,30 @@
         background: url('../images/arrow.png') 0 center no-repeat
         padding-left: 20px
 
-
 .mobile-navigation
-  position: absolute
-  top: 1em
-  right: 1em
+  background-color: white
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  +box-shadow(1px 1px 10px rgba(255, 255, 255, .2))
   +breakpoint($tablet)
     display: none
+  button
+    font-size: 1.1em
+    margin-left: 1.5em
+
+.mobile-screen
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: gray
+  visibility: hidden
+  opacity: 0
+  +transition(all cubic-bezier(.21,.75,.6,.94) .4s)
+  &.is-active
+    visibility: visible
+    opacity: .3
+    +transition(all cubic-bezier(.21,.75,.6,.94) .4s)

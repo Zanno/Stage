@@ -71,9 +71,33 @@ $.mark = {
 $.mark.jump();
 
 // Mobile-navigation
-$('.mobile-navigation').click(function(){
-  $('#menu').toggleClass('is-active');
+$('.mobile-navigation button').click(function(){
+  $('#menu').addClass('is-active');
+  $('.mobile-screen').addClass('is-active');
 });
+$('.mobile-screen').click(function(){
+  $('#menu').removeClass('is-active');
+  $(this).removeClass('is-active');
+});
+
+// Showing back to top.
+$(window).scroll(function() {
+  if ($(window).scrollTop() < $(window).height() * 0.1) {
+    $('.backtotop').removeClass('is-active');
+  } else {
+    $('.backtotop').addClass('is-active');
+  }
+});
+
+// Back to top click event.
+$(".backtotop").click(function(e) {
+  e.preventDefault();
+  $('body, html').animate({
+    scrollTop: $('body, html').offset().top
+  }, 500);
+  return false;
+});
+
 
 //$('.extended-menu-action').click(function (e) {
   //$(this).hide().parents('.header-right').find('.main-menu').addClass('show');

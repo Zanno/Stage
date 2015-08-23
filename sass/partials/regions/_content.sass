@@ -1,9 +1,14 @@
+/**
+ * @file
+ * Region content styles
+ */
+
 .main-content
   padding: 0 1.5em 4em 1.5em
   +breakpoint($desk)
     padding: 0 0 4em 0
 
-//.content
+.content
   ul
     li
       margin-bottom: 1em
@@ -14,7 +19,7 @@
         width: 5px
         height: 5px
         display: inline-block
-        border-radius: 50%
+        +border-radius(50%)
         position: absolute
         top: 10px
         left: 0

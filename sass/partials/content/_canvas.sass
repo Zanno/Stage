@@ -61,7 +61,7 @@
         height: 18px
         font-size: 10px
         font-weight: 700
-        border-radius: 50%
+        +border-radius(50%)
         color: white
         text-align: center
         background-color: $turquoise
@@ -175,7 +175,7 @@
         height: 150px
         text-align: center
         text-transform: uppercase
-        border-radius: 50%
+        +border-radius(50%)
         line-height: 15em
         color: black
         font-weight: 700
@@ -195,7 +195,7 @@
           left: -21px
           right: 0
           bottom: 0
-          border-radius: 50%
+          +border-radius(50%)
         &:hover
           color: $white
           background-color: rgba(42, 210, 201,.8)
@@ -220,8 +220,6 @@
           background-image: url('../images/ico_competition.png')
           &:hover
             background-image: url('../images/ico_arrow_morpheus.png')
-
-
   .site-footer
     .footer-left
       +span(6 of 12 first)
@@ -243,51 +241,3 @@
             font-size: 12px
             &:hover
               color: $white
-
-
-
-//$color: #E94E3D
-
-//.circle
-  position: relative
-  overflow: hidden
-  width: 120px
-  height: 120px
-  border-radius: 50%
-  background: #E94E3D
-  box-shadow: 60px -60px 0 2px $color, -60px -60px 0 2px $color, -60px 60px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #E94E3D
-
-
-//=keyframesborder
-  0%
-    box-shadow: 60px -60px 0 2px $color, -60px -60px 0 2px $color, -60px 60px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #E94E3D
-  25%
-    box-shadow: 0 -125px 0 2px $color, -60px -60px 0 2px $color, -60px 60px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #fff
-
-  50%
-    box-shadow: 0 -125px 0 2px $color, -125px 0px 0 2px $color, -60px 60px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #fff
-  75%
-    box-shadow: 0 -125px 0 2px $color, -125px 0px 0 2px $color, 0px 125px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #fff
-  100%
-    box-shadow: 0 -125px 0 2px $color, -125px 0px 0 2px $color, 0px 125px 0 2px $color, 120px 40px 0 2px $color, 0 0 0 2px #fff
-
-
-// keyframes mixin
-//=keyframes(border)
-  @-webkit-keyframes #{$name}
-    @content
-  @-moz-keyframes #{$name}
-    @content
-  @-ms-keyframes #{$name}
-    @content
-  @keyframes #{$name}
-    @content
-
-// use of keyframes mixin
-//+keyframes(bgcolor)
-  0%
-    background-color: #ffccf2
-  50%
-    background-color: #ccffcc
-  100%
-    background-color: #ccffff
