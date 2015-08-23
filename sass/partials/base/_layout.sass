@@ -1,0 +1,61 @@
+/**
+ *  @file
+ *  Layouts
+ */
+
+.container
+  +container
+  +clearfix
+
+.front
+  .site-header,
+  .main-content,
+  .site-footer
+    @extend .container
+
+.one-sidebar-first
+  .sidebar
+    +span(3 of 12 first)
+  .content
+    box-sizing: border-box
+    padding-left: 2em
+    +span(9 of 12 last)
+.one-sidebar-last
+  .sidebar
+    +span(2 of 12 last)
+    position: fixed
+  .content
+    box-sizing: border-box
+    padding-left: 2em
+    +span(9 of 12 first)
+
+// Image right & left
+.image-left,
+.image-right,
+.two-images
+  margin-bottom: 1em
+  padding: 2em 0 0 0
+  +clearfix
+  h2
+    margin-top: 0
+.image-left
+  .text-content
+    +span(6 of 12 last)
+  .image
+    +span(6 of 12 first)
+
+.image-right
+  .text-content
+    +span(6 of 12 first)
+  .image
+    +span(6 of 12 last)
+
+.two-images
+  .text-content
+    width: 100%
+  .images
+    margin-top: 1.5em
+    .image-one
+      +span(6 of 12 first)
+    .image-two
+      +span(6 of 12 last)

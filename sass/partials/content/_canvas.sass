@@ -1,0 +1,293 @@
+/*
+ * @file
+ * Proposal B style
+ */
+.proposal-b
+  #page
+    background-color: #f2f2f2
+  .site-header,
+  .site-footer
+    background-color: #1C1C1B
+    padding: 1em
+  .site-header
+    font-size: 12px
+    input
+      background-color: #1c1c1b
+      border: 0
+      border-bottom: 1px solid #C2C2C2
+      color: #C2C2C2
+      outline: none
+      font-family: $font-base
+    .header-left
+      +span(6 of 12 first)
+      input
+        float: right
+        width: 45%
+        background: url('../images/zoom.png') 100% center no-repeat
+        background-size: 5%
+        padding: 1em 2.5em 1em .5em
+    .header-right
+      +span(6 of 12 last)
+      position: relative
+      .main-menu
+        visibility: hidden
+        opacity: 0
+        +transition(all cubic-bezier(.21,.75,.6,.94) .1s)
+      .main-menu.show
+        visibility: visible
+        opacity: 1
+        +transition(all cubic-bezier(.21,.75,.6,.94) .6s)
+      .extended-menu-action
+        position: absolute
+        right: 10px
+        top: 10px
+        color: #c2c2c2
+        font-size: 10px
+        padding: .5em 1em
+        border: 1px solid #c2c2c2
+        color: $white
+        text-transform: uppercase
+      .collapsed-menu-action
+        background: url('../images/arrow-up.png') center center no-repeat $turquoise
+        width: 40px
+        height: 40px
+        display: block
+        position: absolute
+        top: 81px
+        right: 30px
+      .badge
+        display: block
+        width: 18px
+        height: 18px
+        font-size: 10px
+        font-weight: 700
+        border-radius: 50%
+        color: white
+        text-align: center
+        background-color: $turquoise
+        position: absolute
+        top: -5px
+        right: -5px
+      .header-menu
+        width: 30%
+        float: left
+        li
+          display: block
+          float: left
+          margin-right: 10px
+          &:last-child
+            margin-right: 0
+        a
+          display:  block
+          width: 30px
+          height: 30px
+          margin: 0 auto
+          position: relative
+        .compare-ico
+          background: url('../images/chain.png') center 0 no-repeat
+        .news-ico
+          background: url('../images/heart.png') center 0 no-repeat
+        .favorites-ico
+          background: url('../images/star.png') center 0 no-repeat
+      .select-form
+        width: 50%
+        float: left
+        margin-right: 5%
+        margin-top: 10px
+        > div
+          width: 45%
+          float: left
+          margin-right: 5%
+          span
+            text-transform: uppercase
+            position: relative
+            span
+              position: absolute
+              top: -15px
+              right: -15px
+          input
+            background: url('../images/arrow-down.png') 100% 0 no-repeat
+            padding-bottom: .5em
+            width: 65%
+            float: right
+            font-size: 12px
+      .user-account
+        width: 15%
+        float: left
+        img
+          float: left
+        a
+          float: left
+          display: block
+          background: url('../images/arrow-down.png') 0 0 no-repeat
+          width: 16px
+          height: 16px
+          margin-top: 15px
+        span
+          clear: both
+          display: block
+  .main-content
+    padding-bottom: 13em
+    .content-wrapper
+      +container
+      padding-top: 5em
+      position: relative
+      #canvas
+        position: absolute
+        top: 100px
+        left: 0
+        right: 0
+        width: 100%
+        +filter(blur(1px))
+        &:hover
+          +filter(blur(0px))
+      .illustration
+        position: relative
+        z-index: 99
+      .part-one
+        width: 20%
+        float: left
+        .products
+          padding-top: 3em
+      .part-two
+        width: 80%
+        float: left
+        .solutions
+          float: right
+          margin-right: 42px
+          position: relative
+          top: 15px
+          +clearfix()
+        .logotype
+          clear: both
+        .collateral
+          float: left
+          margin-left: 20px
+          position: relative
+          margin-top: 12px
+        .competitive
+          float: right
+          margin-right: 88px
+          margin-top: 10px
+      a
+        display: block
+        width: 150px
+        height: 150px
+        text-align: center
+        text-transform: uppercase
+        border-radius: 50%
+        line-height: 15em
+        color: black
+        font-weight: 700
+        background-repeat: no-repeat
+        background-position: center 35%
+        border: 2px solid #cccccc
+        +transition(all cubic-bezier(.21,.75,.6,.94) .3s)
+        position: relative
+        &:before
+          content: ""
+          width: 190px
+          position: absolute
+          height: 190px
+          border: 1px solid #CCCCCC
+          display: block
+          top: -21px
+          left: -21px
+          right: 0
+          bottom: 0
+          border-radius: 50%
+        &:hover
+          color: $white
+          background-color: rgba(42, 210, 201,.8)
+          border: 2px solid rgba(42, 210, 201,.8)
+          +transition(all cubic-bezier(.21,.75,.6,.94) .3s)
+        &.ico-products
+          float: right
+          margin-right: 7px
+          margin-top: 120px
+          background-image: url('../images/ico_products.png')
+          &:hover
+            background-image: url('../images/ico_arrow_morpheus.png')
+        &.ico-solutions
+          background-image: url('../images/ico_solutions.png')
+          &:hover
+            background-image: url('../images/ico_arrow_morpheus.png')
+        &.ico-collateral
+          background-image: url('../images/ico_collateral.png')
+          &:hover
+            background-image: url('../images/ico_arrow_morpheus.png')
+        &.ico-competitive
+          background-image: url('../images/ico_competition.png')
+          &:hover
+            background-image: url('../images/ico_arrow_morpheus.png')
+
+
+  .site-footer
+    .footer-left
+      +span(6 of 12 first)
+    .footer-right
+      +span(6 of 12 last)
+      .footer-menu
+        +clearfix()
+        margin-top: 3em
+        li
+          display: block
+          float: right
+          &:first-child a
+            border-right: 0
+          a
+            color: #C2C2C2
+            display: block
+            padding: 0 1em
+            border-right: 1px solid #C2C2C2
+            font-size: 12px
+            &:hover
+              color: $white
+
+
+
+//$color: #E94E3D
+
+//.circle
+  position: relative
+  overflow: hidden
+  width: 120px
+  height: 120px
+  border-radius: 50%
+  background: #E94E3D
+  box-shadow: 60px -60px 0 2px $color, -60px -60px 0 2px $color, -60px 60px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #E94E3D
+
+
+//=keyframesborder
+  0%
+    box-shadow: 60px -60px 0 2px $color, -60px -60px 0 2px $color, -60px 60px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #E94E3D
+  25%
+    box-shadow: 0 -125px 0 2px $color, -60px -60px 0 2px $color, -60px 60px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #fff
+
+  50%
+    box-shadow: 0 -125px 0 2px $color, -125px 0px 0 2px $color, -60px 60px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #fff
+  75%
+    box-shadow: 0 -125px 0 2px $color, -125px 0px 0 2px $color, 0px 125px 0 2px $color, 60px 60px 0 2px $color, 0 0 0 2px #fff
+  100%
+    box-shadow: 0 -125px 0 2px $color, -125px 0px 0 2px $color, 0px 125px 0 2px $color, 120px 40px 0 2px $color, 0 0 0 2px #fff
+
+
+// keyframes mixin
+//=keyframes(border)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+// use of keyframes mixin
+//+keyframes(bgcolor)
+  0%
+    background-color: #ffccf2
+  50%
+    background-color: #ccffcc
+  100%
+    background-color: #ccffff

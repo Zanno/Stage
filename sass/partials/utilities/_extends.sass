@@ -1,0 +1,39 @@
+.button
+  border: 1px solid turquoise
+  padding: .5em 1em
+  margin: 1em 0
+  display: inline-block
+  color: turquoise
+  +transition(all cubic-bezier(.21,.75,.6,.94) .2s .1s)
+  &:hover
+    background-color: turquoise
+    color: #ffffff
+    +transition(all cubic-bezier(.21,.75,.6,.94) .4s)
+
+.image
+  overflow: hidden
+  position: relative
+  &:hover
+    a:after
+      top: 100%
+      +transition(all cubic-bezier(.21,.75,.6,.94) .6s)
+    img
+      border: 1px solid #c2c2c2
+      +transform(scale(1.03))
+      +transition(all cubic-bezier(.21,.75,.6,.94) 1s .1s)
+  a
+    line-height: 0
+    display: block
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      width: 100%
+      height: 100%
+      background: url('../images/zoom.png') center no-repeat rgba(0, 0, 0, .3)
+      +transition(all cubic-bezier(.21,.75,.6,.94) .6s)
+  img
+    border: 1px solid #c2c2c2
+    cursor: pointer
+    +transition(all cubic-bezier(.21,.75,.6,.94) 1s .1s)
