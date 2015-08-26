@@ -1,14 +1,14 @@
 // Buttons
 .button
-  border: 1px solid turquoise
+  border: 1px solid $border-button
   padding: .5em 1em
   margin: 1em 0
   display: inline-block
-  color: turquoise
+  color: $color-button
   +transition(all cubic-bezier(.21,.75,.6,.94) .2s .1s)
   &:hover
-    background-color: turquoise
-    color: #ffffff
+    background-color: $background-button
+    color: $color-hover-button
     +transition(all cubic-bezier(.21,.75,.6,.94) .4s)
 
 // Image lens
@@ -20,7 +20,7 @@
       top: 100%
       +transition(all cubic-bezier(.21,.75,.6,.94) .6s)
     img
-      border: 1px solid #c2c2c2
+      border: 1px solid $border-image
       +transform(scale(1.03))
       +transition(all cubic-bezier(.21,.75,.6,.94) 1s .1s)
   a
@@ -36,7 +36,7 @@
       background: url('../images/zoom.png') center no-repeat rgba(0, 0, 0, .3)
       +transition(all cubic-bezier(.21,.75,.6,.94) .6s)
   img
-    border: 1px solid #c2c2c2
+    border: 1px solid $border-image
     cursor: pointer
     +transition(all cubic-bezier(.21,.75,.6,.94) 1s .1s)
 

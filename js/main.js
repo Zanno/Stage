@@ -1,11 +1,18 @@
+/**
+ * @file
+ * Main.js
+ */
+
+// First load of content when window is loaded
 $(window).load(function() {
   $.ajax({
     url: 'tpl-introduction.html',
     success: function(data) {
-      $('.content').hide().html(data).fadeIn('200');
+      $('.front .content').hide().html(data).fadeIn('200');
     }
   });
 });
+
 // Ajax load content
 $('#menu > li > a').click(function(e) {
   e.preventDefault();
@@ -21,11 +28,16 @@ $('#menu > li > a').click(function(e) {
     case "#gallery":
       var url = 'tpl-gallery.html';
       break;
+    // New case here
+    //case "#link a href":
+      //var url = 'new-tpl.html';
+      //break;
     return url;
   }
   $.ajax({
     url: url,
     success: function(data) {
+      // We need to load "masonry.js" if we agree to the gallery
       if (url == 'tpl-gallery.html'){
         $.getScript("js/masonry.js");
       }
@@ -82,10 +94,10 @@ $('.mobile-screen').click(function(){
 
 // Showing back to top.
 $(window).scroll(function() {
-  if ($(window).scrollTop() < $(window).height() * 0.1) {
-    $('.backtotop').removeClass('is-active');
-  } else {
+  if ($(window).scrollTop() > $(window).height() * 0.1) {
     $('.backtotop').addClass('is-active');
+  } else {
+    $('.backtotop').removeClass('is-active');
   }
 });
 
@@ -98,11 +110,11 @@ $(".backtotop").click(function(e) {
   return false;
 });
 
-
-//$('.extended-menu-action').click(function (e) {
-  //$(this).hide().parents('.header-right').find('.main-menu').addClass('show');
-//});
-//$('.collapsed-menu-action').click(function (e) {
-  //$(this).closest('.header-right').find('.main-menu').removeClass('show');
-  //$(this).closest('.header-right').find('.extended-menu-action').show();
-//});
+// Collapsed menu canvas.html
+$('.extended-menu-action').click(function(e) {
+  $(this).hide().parents('.header-right').find('.main-menu').addClass('show');
+});
+$('.collapsed-menu-action').click(function (e) {
+  $(this).closest('.header-right').find('.main-menu').removeClass('show');
+  $(this).closest('.header-right').find('.extended-menu-action').show();
+});

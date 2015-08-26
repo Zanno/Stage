@@ -3,17 +3,82 @@
  * Variables
  */
 
-// Fonts
+// ------------- Fonts --------------------
+
 $font-base      : 'Open Sans', sans-serif
 $font-title     : 'Advent Pro', sans-serif
 
-// Colors
+// ----------------------------------------
 
-$color          : #2AD2C9
 
-$white          : #ffffff
-$turquoise      : #2AD2C9
-$dark-turquoise : #04938a
+// ------------- Colours ------------------
+
+// Primary colour
+$color                        : #2AD2C9
+$color-alfa                   : rgba($color, .8)
+$dark-color                   : #04938a
+
+$white                        : #ffffff
+$white-alfa                   : rgba($white, .9)
+$black                        : #000000
+
+// Secondary colour
+$dark-gray                    : #808080
+$gray                         : #C2C2C2
+$light-gray                   : #e1e1e1
+
+// Auxiliar colour
+
+// ----------------------------------------
+
+
+// ------------ Page colour ---------------
+
+// Body
+$color-body                   : $dark-gray
+$background-page              : $white
+
+// h1
+$border-h : $light-gray
+
+// Links
+$color-a                      : $color
+$color-hover-a                : $dark-color
+
+// Main menu
+$color-menu-a                 : $dark-gray
+$color-menu-a-hover           : $color
+$background-menu-a-after      : $color
+
+// Sub menu
+$color-submenu-a              : $dark-gray
+$color-submenu-a-hover        : $color
+
+// Main menu mobile screen
+$background-mobile-navigation : $white
+$background-mobile-menu       : $white-alfa
+$background-mobile-screen     : $dark-gray
+
+// Buttons
+$border-button                : $color
+$color-button                 : $color
+$color-hover-button           : $white
+$background-button            : $color-alfa
+
+// Images
+$border-image                 : $gray
+
+// Back to top
+$color-backtop                : $color
+$color-hover-backtop          : $white
+$background-backtop           : $white-alfa
+$background-hover-backtop     : $color-alfa
+$border-backtop               : $color
+
+// -----------------------------------------
+
+
+// ----------- Screen sizes (grid) ---------
 
 // Screen sizes (grid)
 $mobile-360   : 22.5em
@@ -28,3 +93,5 @@ $monster      : 118.750em
 $legacy-support-for-ie6: false
 $legacy-support-for-ie7: false
 $legacy-support-for-ie8: true
+
+// -----------------------------------------

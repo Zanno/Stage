@@ -12,26 +12,25 @@ body
   height: 100%
 body
   font-size: 14px
-  color: gray
+  color: $color-body
   font-family: 'Open Sans', Helvetica, "Lucida Grande", Arial, Verdana, Geneva, sans-serif
   font-weight: 400
   line-height: 1.5em
   margin: 0
 #page
-  background: $white
+  background: $background-page
   min-height: 100%
   position: relative
 // Headings & typography
 h1, h2, h3, h4, h5, h6
   font-weight: 400
   font-family: 'Advent Pro', 'Open Sans', Helvetica, "Lucida Grande", Arial, Verdana, Geneva, sans-serif
-  font-weight: 600
+  margin: .8em 0
 h1
   font-size: 2.2em
   margin-top: 0
-  margin-bottom: .8em
-  padding-bottom: .6em
-  border-bottom: 1px solid #e1e1e1
+  padding-bottom: .5em
+  border-bottom: 1px solid $light-gray
 h2
   font-size: 1.8em
 h3
@@ -43,10 +42,10 @@ h5
 p
   margin-bottom: 1em
 a
-  color: $turquoise
+  color: $color-a
   text-decoration: none
   &:hover
-    color: $dark-turquoise
+    color: $color-hover-a
     text-decoration: none
 
 // List

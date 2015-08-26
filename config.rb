@@ -5,7 +5,6 @@ require 'sass-globbing'
 require 'breakpoint'
 require 'susy'
 require 'bourbon-compass'
-require 'compass'
 require 'celluloid/current'
 
 # Set this to the root of your project when deployed:

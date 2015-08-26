@@ -6,14 +6,14 @@
   min-width: 200px
   z-index: 9999
   padding: 2em
-  background-color: rgba(255,255,255,.9)
+  background-color: $background-mobile-menu
   +transition(left cubic-bezier(.21,.75,.6,.94) 1.5s)
   list-style: none
   &.is-active
     left: 0%
     +transition(left cubic-bezier(.21,.75,.6,.94) .5s)
   +breakpoint($tablet)
-    padding: 13px 0 0 0
+    padding: 10px 0 0 0
     min-width: auto
     top: initial
     left: initial
@@ -23,7 +23,7 @@
   > li
     margin-bottom: 15px
     > a
-      color: gray
+      color: $color-menu-a
       font-size: 20px
       margin-bottom: 5px
       display: block
@@ -35,12 +35,12 @@
         display: block
         height: 1px
         margin-top: 5px
-        background-color: turquoise
+        background-color: $background-menu-a-after
         margin-bottom: 10px
         width: 0
       &:hover,
       &.active
-        color: turquoise
+        color: $color-menu-a-hover
       &:hover
         &:after
           width: 10%
@@ -53,12 +53,12 @@
     li
       margin-bottom: 3px
       a
-        color: gray
+        color: $color-submenu-a
         background: url('../images/arrow.png') 0 center no-repeat
         padding-left: 20px
 
 .mobile-navigation
-  background-color: white
+  background-color: $background-mobile-navigation
   position: fixed
   top: 0
   left: 0
@@ -76,7 +76,7 @@
   left: 0
   right: 0
   bottom: 0
-  background-color: gray
+  background-color: $background-mobile-screen
   visibility: hidden
   opacity: 0
   +transition(all cubic-bezier(.21,.75,.6,.94) .4s)
