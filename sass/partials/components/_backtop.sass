@@ -7,16 +7,18 @@
   height: 60px
   +border-radius(50%)
   position: fixed
-  right: -70px
-  bottom: 16px
+  right: 15px
+  bottom: -75px
   background-color: $background-backtop
   border: 1px solid $border-backtop
   color: $color-backtop
+  opacity: 0
   text-transform: uppercase
   +transition(all cubic-bezier(.21,.75,.6,.94) .5s)
   &:hover
     color: $color-hover-backtop
     background-color: $background-hover-backtop
   &.is-active
-    right: 16px
+    bottom: 15px
+    opacity: 1
     +transition(all cubic-bezier(.21,.75,.6,.94) .5s)

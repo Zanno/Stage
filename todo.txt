@@ -1,0 +1,5 @@
+Todo:
+- Implementacion de libsass
+- Readme con todo aquello integrado en el tema: masonry, recarga dinamica por ajax, variables, templates (image left, right, two images), responsive, canvas, libsass, bourbon tags position. (introduccion.tpl)
+- Prueba proyecto con max-width: 100%
+- Descripcion en cada template de cosas relevantes: introduccion, layouts, gallery, como por ejemplo como colocar el menu a la derecha mediante la clase en el body, como usar los layout etc.
