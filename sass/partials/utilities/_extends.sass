@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Extends
+ */
+
 // Buttons
 .button
   border: 1px solid $border-button
@@ -15,6 +20,18 @@
 .image
   overflow: hidden
   position: relative
+  a
+    line-height: 0
+    display: block
+    &:after
+      content: ""
+      +coverer()
+      background: url('../images/zoom.png') center no-repeat rgba(0, 0, 0, .3)
+      +transition(all cubic-bezier(.21,.75,.6,.94) .6s)
+  img
+    border: 1px solid $border-image
+    cursor: pointer
+    +transition(all cubic-bezier(.21,.75,.6,.94) 1s .1s)
   &:hover
     a:after
       top: 100%
@@ -23,25 +40,17 @@
       border: 1px solid $border-image
       +transform(scale(1.03))
       +transition(all cubic-bezier(.21,.75,.6,.94) 1s .1s)
-  a
-    line-height: 0
-    display: block
-    &:after
-      content: ""
-      display: block
-      position: absolute
-      top: 0
-      width: 100%
-      height: 100%
-      background: url('../images/zoom.png') center no-repeat rgba(0, 0, 0, .3)
-      +transition(all cubic-bezier(.21,.75,.6,.94) .6s)
-  img
-    border: 1px solid $border-image
-    cursor: pointer
-    +transition(all cubic-bezier(.21,.75,.6,.94) 1s .1s)
 
-// Hide elements
+// -- Hide elements --
+
+// Hide modern
 .hide-modern
   font-size: 0
   line-height: 0
   color: transparent
+
+// Hide clasical
+.hide
+  display: none
+
+// -------------------
